@@ -90,4 +90,3 @@ const faculty = [
 ];
 
 export default faculty;
-export { faculty };

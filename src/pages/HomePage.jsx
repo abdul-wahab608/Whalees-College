@@ -3,9 +3,9 @@ import Navbar from "../components/Navbar"; // Non-functional placeholder navbar
 import HeroSection from "../components/home/HeroSection";
 import About from "../components/home/About";
 import CoreValues from "../components/home/CoreValues";
-import Faculty from "../components/home/Faculty";
+import Faculty from "../components/faculty/Faculty";
 import FeatureSection from "../components/home/FeatureSection";
-import News from "../components/home/News";
+import News from "../components/news/News";
 import GallerySection from "../components/home/Gallery";
 import TopPerformers from "../components/home/TopPerformers";
 import Announcements from "../components/home/Announcements";
@@ -14,6 +14,9 @@ import StatsSection from "../components/home/StatsSection";
 import Dean from "../components/home/Dean";
 import Location from "../components/home/Location";
 import Footer from "../components/Footer";
+import facultyData from "../data/faculty";
+import blogPosts from "../data/blogPosts";
+import newsItems from "../data/newsItems";
 
 const HomePage = () => {
   return (
@@ -21,19 +24,18 @@ const HomePage = () => {
       {/* Single, page-length watermark background using logo1.jpeg */}
       <div
         aria-hidden
-        className="pointer-events-none fixed inset-0"
+        className="pointer-events-none fixed inset-0 z-50"
         style={{
-          zIndex: 50, // above regular content, below modals
           backgroundImage: "url(/assets/images/logo1.jpeg)",
           backgroundRepeat: "no-repeat",
-          backgroundSize: "auto 100%", // fit height; width auto
+          backgroundSize: "auto 100%",
           backgroundPosition: "center center",
-          opacity: 0.05, // slightly increased to ensure visibility
+          opacity: 0.05,
         }}
       />
 
       {/* Content wrapper above base background and below high-z modals */}
-      <div className="relative" style={{ zIndex: 10 }}>
+      <div className="relative z-10">
       {/* Marquee announcement above navbar */}
       <div className="bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 text-white py-2 overflow-hidden">
         <marquee behavior="scroll" direction="left" scrollamount="6" className="font-semibold text-sm">
@@ -56,7 +58,7 @@ const HomePage = () => {
 
       {/* Faculty Section (inserted below About, before Core Values) */}
       <section id="faculty" className="bg-white">
-        <Faculty />
+        <Faculty facultyData={facultyData} />
       </section>
 
       {/* Core Values Section */}
@@ -66,7 +68,7 @@ const HomePage = () => {
 
       {/* News Section (Blog + News) */}
       <section id="news" className="bg-white">
-        <News />
+        <News blogPosts={blogPosts} newsItems={newsItems} />
       </section>
 
       {/* Feature Section */}

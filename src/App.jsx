@@ -1,8 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-
-import Home from "./pages/Home";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
 import About from "./pages/About";
 import Admission from "./pages/Admission";
 import Academics from "./pages/Academics";
@@ -18,28 +15,20 @@ import Blog from "./pages/Blog";
 
 export default function App() {
   return (
-    <Router>
-      <div className="min-h-screen flex flex-col">
-        <Navbar />
-        <main className="flex-1">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/admission" element={<Admission />} />
-            <Route path="/academics" element={<Academics />} />
-            <Route path="/life-at-whales" element={<LifeAtWhales />} />
-            <Route path="/ccsp" element={<CCSP />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/downloads" element={<Downloads />} />
-            <Route path="/alumni" element={<Alumni />} />
-            <Route path="/interviews" element={<Interviews />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/blog" element={<Blog />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/admission" element={<Admission />} />
+      <Route path="/academics" element={<Academics />} />
+      <Route path="/life-at-whales" element={<LifeAtWhales />} />
+      <Route path="/ccsp" element={<CCSP />} />
+      <Route path="/gallery" element={<Gallery />} />
+      <Route path="/downloads" element={<Downloads />} />
+      <Route path="/alumni" element={<Alumni />} />
+      <Route path="/interviews" element={<Interviews />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/blog" element={<Blog />} />
+    </Routes>
   );
 }

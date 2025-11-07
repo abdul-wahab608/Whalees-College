@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { topPerformersData } from './TopPerformerData';
+import topPerformers from '../../data/topPerformers';
 
 const container = {
     hidden: {},
@@ -71,7 +71,7 @@ const TopPerformers = () => {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {topPerformersData.map((p) => (
+                    {topPerformers.map((p) => (
                         <motion.div
                             key={p.id}
                             className="bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 p-6 flex flex-col"

@@ -26,4 +26,3 @@ const blogPosts = [
 ];
 
 export default blogPosts;
-export { blogPosts };

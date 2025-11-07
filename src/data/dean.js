@@ -13,4 +13,3 @@ I invite you to explore, question, build, and lead. Your ideas matter here. Welc
 };
 
 export default dean;
-export { dean };

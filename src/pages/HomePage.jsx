@@ -17,7 +17,23 @@ import Footer from "../components/Footer";
 
 const HomePage = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50">
+    <div className="relative flex flex-col min-h-screen bg-gray-50">
+      {/* Single, page-length watermark background using logo1.jpeg */}
+      <div
+        aria-hidden
+        className="pointer-events-none fixed inset-0"
+        style={{
+          zIndex: 50, // above regular content, below modals
+          backgroundImage: "url(/assets/images/logo1.jpeg)",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "auto 100%", // fit height; width auto
+          backgroundPosition: "center center",
+          opacity: 0.05, // slightly increased to ensure visibility
+        }}
+      />
+
+      {/* Content wrapper above base background and below high-z modals */}
+  <div className="relative" style={{ zIndex: 10 }}>
       {/* Navbar */}
       <header className="shadow-sm bg-white sticky top-0 z-50">
         <Navbar />
@@ -99,6 +115,7 @@ const HomePage = () => {
       <footer id="footer" className="mt-auto bg-gray-100">
         <Footer />
       </footer>
+      </div>
     </div>
   );
 };

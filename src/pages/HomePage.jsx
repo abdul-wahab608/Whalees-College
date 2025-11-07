@@ -11,6 +11,7 @@ import TopPerformers from "../components/home/TopPerformers";
 import Announcements from "../components/home/Announcements";
 import AlumniTestimonials from "../components/alumni/AlumniTestimonials";
 import StatsSection from "../components/home/StatsSection";
+import Dean from "../components/home/Dean";
 import Location from "../components/home/Location";
 import Footer from "../components/Footer";
 
@@ -70,6 +71,11 @@ const HomePage = () => {
       {/* Alumni Testimonials */}
       <section id="testimonials" className="py-16 bg-gray-50">
         <AlumniTestimonials />
+      </section>
+
+      {/* Dean Section (above stats) */}
+      <section id="dean">
+        <Dean />
       </section>
 
       {/* Stats Section */}

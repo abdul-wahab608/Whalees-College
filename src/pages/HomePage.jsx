@@ -33,13 +33,18 @@ const HomePage = () => {
       />
 
       {/* Content wrapper above base background and below high-z modals */}
-  <div className="relative" style={{ zIndex: 10 }}>
+      <div className="relative" style={{ zIndex: 10 }}>
+      {/* Marquee announcement above navbar */}
+      <div className="bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 text-white py-2 overflow-hidden">
+        <marquee behavior="scroll" direction="left" scrollamount="6" className="font-semibold text-sm">
+          🎓 Admissions For 2025 are Open — Apply Now!
+        </marquee>
+      </div>
+
       {/* Navbar */}
       <header className="shadow-sm bg-white sticky top-0 z-50">
         <Navbar />
-      </header>
-
-      {/* Hero Section */}
+      </header>      {/* Hero Section */}
       <section id="hero">
         <HeroSection />
       </section>

@@ -1,7 +1,49 @@
 import React, { useMemo, useRef, useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeftIcon, ChevronRightIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import facultyData from "../../data/faculty";
+
+// Lightweight inline SVG icons to avoid external icon dependency
+const IconChevronLeft = ({ className = "h-5 w-5" }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={1.5}
+    stroke="currentColor"
+    className={className}
+    aria-hidden="true"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+  </svg>
+);
+
+const IconChevronRight = ({ className = "h-5 w-5" }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={1.5}
+    stroke="currentColor"
+    className={className}
+    aria-hidden="true"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+  </svg>
+);
+
+const IconX = ({ className = "h-5 w-5" }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    strokeWidth={1.5}
+    stroke="currentColor"
+    className={className}
+    aria-hidden="true"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+  </svg>
+);
 
 const SectionTitle = ({ title, subtitle }) => (
   <div className="text-center mb-8">
@@ -66,7 +108,7 @@ const Modal = ({ open, onClose, item }) => {
         >
           {/* Backdrop */}
           <div
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            className="absolute inset-0 bg-black/50 backdrop-blur-md"
             onClick={onClose}
           />
           {/* Dialog */}
@@ -87,7 +129,7 @@ const Modal = ({ open, onClose, item }) => {
                 aria-label="Close"
                 className="absolute right-4 top-4 p-2 rounded-full bg-white/80 shadow hover:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
-                <XMarkIcon className="h-5 w-5 text-gray-700" />
+                <IconX className="h-5 w-5 text-gray-700" />
               </button>
 
               <div className="grid grid-cols-1 md:grid-cols-2">
@@ -194,7 +236,7 @@ const Faculty = () => {
             className="hidden md:flex absolute -left-4 top-1/2 -translate-y-1/2 z-10 h-10 w-10 items-center justify-center rounded-full bg-white shadow border border-gray-200 hover:bg-gray-50"
             aria-label="Scroll left"
           >
-            <ChevronLeftIcon className="h-5 w-5 text-gray-700" />
+            <IconChevronLeft className="h-5 w-5 text-gray-700" />
           </button>
 
           {/* Right button */}
@@ -204,7 +246,7 @@ const Faculty = () => {
             className="hidden md:flex absolute -right-4 top-1/2 -translate-y-1/2 z-10 h-10 w-10 items-center justify-center rounded-full bg-white shadow border border-gray-200 hover:bg-gray-50"
             aria-label="Scroll right"
           >
-            <ChevronRightIcon className="h-5 w-5 text-gray-700" />
+            <IconChevronRight className="h-5 w-5 text-gray-700" />
           </button>
 
           <div

@@ -5,6 +5,7 @@ import About from "../components/home/About";
 import CoreValues from "../components/home/CoreValues";
 import Faculty from "../components/home/Faculty";
 import FeatureSection from "../components/home/FeatureSection";
+import News from "../components/home/News";
 import GallerySection from "../components/home/Gallery";
 import TopPerformers from "../components/home/TopPerformers";
 import Announcements from "../components/home/Announcements";
@@ -39,6 +40,11 @@ const HomePage = () => {
       {/* Core Values Section */}
       <section id="core-values">
         <CoreValues />
+      </section>
+
+      {/* News Section (Blog + News) */}
+      <section id="news" className="bg-white">
+        <News />
       </section>
 
       {/* Feature Section */}

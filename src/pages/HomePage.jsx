@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar"; // Non-functional placeholder navbar
 import HeroSection from "../components/home/HeroSection";
+import About from "../components/home/About";
 import CoreValues from "../components/home/CoreValues";
 import FeatureSection from "../components/home/FeatureSection";
 import GallerySection from "../components/home/Gallery";
@@ -22,6 +23,11 @@ const HomePage = () => {
       {/* Hero Section */}
       <section id="hero">
         <HeroSection />
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-16 bg-gray-50">
+        <About />
       </section>
 
       {/* Core Values Section */}

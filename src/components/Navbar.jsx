@@ -8,7 +8,7 @@ export default function Navbar() {
           <div className="relative group">
             <div className="absolute inset-0 bg-white/10 rounded-lg filter blur-sm transition-all duration-200 group-hover:bg-white/20"></div>
             <img 
-              src="/assets/images/logo.jpg" 
+              src="/assets/images/whaleslogo.png" 
               alt="Whales College" 
               className="h-14 w-auto relative rounded transform hover:scale-102 transition-all duration-200" 
             />

@@ -7,6 +7,8 @@ import GallerySection from "../components/home/Gallery";
 import TopPerformers from "../components/home/TopPerformers";
 import Announcements from "../components/home/Announcements";
 import AlumniTestimonials from "../components/alumni/AlumniTestimonials";
+import StatsSection from "../components/home/StatsSection";
+import Location from "../components/home/Location";
 import Footer from "../components/Footer";
 
 const HomePage = () => {
@@ -50,6 +52,23 @@ const HomePage = () => {
       {/* Alumni Testimonials */}
       <section id="testimonials" className="py-16 bg-gray-50">
         <AlumniTestimonials />
+      </section>
+
+      {/* Stats Section */}
+      <section id="stats">
+        <StatsSection />
+      </section>
+
+      {/* Location (large map) */}
+      <section id="location" className="bg-white">
+        {/* render large map above footer (60vh) - Whales College Karachi */}
+        <Location 
+          lat={24.9075918} 
+          lng={67.1217672} 
+          zoom={17} 
+          height="60vh"
+          address="E, 73 Gulshan, Block 7 Gulshan-e-Iqbal, Karachi, 75290"
+        />
       </section>
 
       {/* Footer */}

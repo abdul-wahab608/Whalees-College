@@ -8,9 +8,25 @@ const quotes = [
 ];
 
 const quoteVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -20 },
+  hidden: { opacity: 0, y: 30, scale: 0.95 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: 1,
+      ease: [0.25, 0.1, 0.25, 1]
+    }
+  },
+  exit: { 
+    opacity: 0, 
+    y: -30,
+    scale: 0.95,
+    transition: {
+      duration: 0.6,
+      ease: [0.25, 0.1, 0.25, 1]
+    }
+  },
 };
 
 const HeroSection = () => {
@@ -73,21 +89,21 @@ const HeroSection = () => {
         style={{ x: bgX, y: bgY }}
         aria-hidden
       >
-        <div className="absolute inset-0 bg-black/25 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-white/40 backdrop-blur-[4px]" />
         <img
           src="/assets/images/admission.jpg"
           alt="Campus admission background"
-          className="w-full h-full object-cover scale-105 opacity-90"
-          style={{ willChange: 'transform' }}
+          className="w-full h-full object-cover scale-105 opacity-50"
+          style={{ willChange: 'transform', filter: 'blur(1.5px)' }}
         />
       </motion.div>
 
       {/* subtle overlay to improve contrast */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-white/10 pointer-events-none backdrop-filter" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white/30 via-white/15 to-white/20 pointer-events-none" />
 
       {/* Heading (3D tilt) */}
       <motion.h1
-        className="relative z-10 text-4xl sm:text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg mb-6 tracking-tight"
+        className="relative z-10 text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 drop-shadow-lg mb-6 tracking-tight"
         style={{ rotateX, rotateY, transformStyle: 'preserve-3d' }}
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -101,12 +117,11 @@ const HeroSection = () => {
         <AnimatePresence mode="wait">
           <motion.p
             key={quotes[index]}
-            className="text-lg md:text-2xl text-white/90 italic leading-relaxed mx-4"
+            className="text-lg md:text-2xl text-gray-900 font-semibold italic leading-relaxed mx-4 bg-white/40 backdrop-blur-sm rounded-2xl py-6 px-8 shadow-lg"
             variants={quoteVariants}
             initial="hidden"
             animate="visible"
             exit="exit"
-            transition={{ duration: 0.8 }}
           >
             “{quotes[index]}”
           </motion.p>

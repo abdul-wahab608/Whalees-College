@@ -82,7 +82,7 @@ const TopPerformers = () => {
                                 <div className="w-20 h-20 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-indigo-100">
                                     <img
                                         src={p.photo}
-                                        alt={`${p.name} — ${p.program}`}
+                                        alt={p.name}
                                         className="w-full h-full object-cover"
                                     />
                                 </div>
@@ -139,7 +139,7 @@ const TopPerformers = () => {
                         >
                             <div className="flex items-start gap-4">
                                 <div className="w-28 h-28 rounded-lg overflow-hidden flex-shrink-0">
-                                    <img src={selected.photo} alt={`${selected.name} photo`} className="w-full h-full object-cover" />
+                                    <img src={selected.photo} alt={selected.name} className="w-full h-full object-cover" />
                                 </div>
                                 <div className="flex-1">
                                     <h3 id="tp-modal-title" className="text-2xl font-bold text-gray-900">{selected.name}</h3>
@@ -158,10 +158,14 @@ const TopPerformers = () => {
                                 </div>
                             </div>
 
-                            <div className="mt-6 flex gap-3">
-                                <a href="#" className="text-sm text-indigo-600 hover:underline focus:outline-none focus:ring-2 focus:ring-indigo-500">Visit profile</a>
-                                <button className="ml-auto inline-flex items-center px-3 py-2 bg-indigo-600 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">Contact</button>
-                            </div>
+                                                        <div className="mt-6 flex gap-3">
+                                                                {selected.profileUrl ? (
+                                                                    <a href={selected.profileUrl} target="_blank" rel="noopener noreferrer" className="text-sm text-indigo-600 hover:underline focus:outline-none focus:ring-2 focus:ring-indigo-500">Visit profile</a>
+                                                                ) : (
+                                                                    <button type="button" className="text-sm text-indigo-600 hover:underline focus:outline-none focus:ring-2 focus:ring-indigo-500">Visit profile</button>
+                                                                )}
+                                                                <button type="button" className="ml-auto inline-flex items-center px-3 py-2 bg-indigo-600 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">Contact</button>
+                                                        </div>
                         </motion.div>
                     </motion.div>
                 )}

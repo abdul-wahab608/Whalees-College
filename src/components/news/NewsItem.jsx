@@ -29,7 +29,7 @@ const NewsItem = ({ item, onOpen }) => {
           <img
             src={item.image}
             alt={item.title}
-            className="h-48 w-full object-cover transition-transform duration-300 group-hover:scale-110"
+            className="h-40 sm:h-48 w-full object-cover transition-transform duration-300 group-hover:scale-110"
           />
         </div>
       )}

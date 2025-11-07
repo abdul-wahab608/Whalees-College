@@ -36,13 +36,13 @@ const FacultyModal = ({ open, onClose, item }) => {
             role="dialog"
             aria-modal="true"
             aria-labelledby="faculty-modal-title"
-            className="absolute inset-0 flex items-center justify-center p-4"
+            className="absolute inset-0 flex items-center justify-center p-2 sm:p-4"
             initial={{ scale: 0.95, opacity: 0, y: 20 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.98, opacity: 0 }}
             transition={{ type: "spring", stiffness: 220, damping: 22 }}
           >
-            <div className="relative w-full max-w-4xl bg-white rounded-2xl shadow-xl overflow-hidden">
+            <div className="relative w-full max-w-4xl bg-white rounded-2xl shadow-xl overflow-hidden max-h-[90vh]">
               <button
                 type="button"
                 onClick={onClose}
@@ -61,7 +61,7 @@ const FacultyModal = ({ open, onClose, item }) => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                 </div>
-                <div className="p-6 md:p-8">
+                <div className="p-5 sm:p-6 md:p-8 overflow-y-auto max-h-[calc(90vh-14rem)]">
                   <h3 id="faculty-modal-title" className="text-2xl font-bold text-gray-900">
                     {item.name}
                   </h3>

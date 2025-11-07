@@ -9,11 +9,11 @@ const FacultyCard = ({ item, onOpen }) => (
   <motion.button
     type="button"
     onClick={() => onOpen(item)}
-    className="group w-72 flex-shrink-0 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden focus:outline-none focus:ring-2 focus:ring-blue-500"
+    className="group w-[88%] xs:w-64 sm:w-72 md:w-80 flex-shrink-0 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden focus:outline-none focus:ring-2 focus:ring-blue-500"
     whileHover={{ y: -4 }}
     aria-label={`Open details for ${item.name}`}
   >
-    <div className="relative h-44 w-full overflow-hidden">
+  <div className="relative h-40 sm:h-44 w-full overflow-hidden">
       <img
         src={item.photo}
         alt={`${item.name} portrait`}

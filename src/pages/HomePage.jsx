@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar"; // Non-functional placeholder navbar
 import HeroSection from "../components/home/HeroSection";
 import About from "../components/home/About";
 import CoreValues from "../components/home/CoreValues";
+import Faculty from "../components/home/Faculty";
 import FeatureSection from "../components/home/FeatureSection";
 import GallerySection from "../components/home/Gallery";
 import TopPerformers from "../components/home/TopPerformers";
@@ -28,6 +29,11 @@ const HomePage = () => {
       {/* About Section */}
       <section id="about" className="py-16 bg-gray-50">
         <About />
+      </section>
+
+      {/* Faculty Section (inserted below About, before Core Values) */}
+      <section id="faculty" className="bg-white">
+        <Faculty />
       </section>
 
       {/* Core Values Section */}

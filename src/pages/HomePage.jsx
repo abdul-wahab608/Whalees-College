@@ -21,23 +21,8 @@ import newsItems from "../data/newsItems";
 const HomePage = () => {
   return (
     <div className="relative flex flex-col min-h-screen bg-gray-50">
-      {/* Single, page-length watermark background using logo1.jpeg */}
-      <div
-        aria-hidden
-        className="pointer-events-none fixed inset-0 z-50"
-        style={{
-          backgroundImage: "url(/assets/images/logo1.jpeg)",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "auto 100%",
-          backgroundPosition: "center center",
-          opacity: 0.05,
-        }}
-      />
-
-      {/* Content wrapper above base background and below high-z modals */}
-      <div className="relative z-10">
       {/* Marquee announcement above navbar */}
-      <div className="bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 text-white py-2 overflow-hidden">
+      <div className="bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 text-white py-2 overflow-hidden relative z-50">
         <marquee behavior="scroll" direction="left" scrollamount="6" className="font-semibold text-sm">
           🎓 Admissions For 2025 are Open — Apply Now!
         </marquee>
@@ -46,18 +31,40 @@ const HomePage = () => {
       {/* Navbar */}
       <header className="shadow-sm bg-white sticky top-0 z-50">
         <Navbar />
-      </header>      {/* Hero Section */}
+      </header>
+
+      {/* Watermark - positioned after navbar and before footer */}
+      <div className="relative">
+        <div
+          aria-hidden
+          className="pointer-events-none fixed z-10"
+          style={{
+            backgroundImage: "url(/assets/images/logo1.jpeg)",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "auto 100%",
+            backgroundPosition: "center center",
+            opacity: 0.05,
+            top: "80px", // Start after navbar
+            left: 0,
+            right: 0,
+            bottom: "0", // Will be covered by footer
+            height: "calc(100vh - 80px)",
+          }}
+        />
+
+        {/* Main content with watermark */}
+        <div className="relative z-20">      {/* Hero Section */}
       <section id="hero">
         <HeroSection />
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 bg-gray-50">
+      <section id="about" className="py-16 bg-gray-50/80">
         <About />
       </section>
 
       {/* Faculty Section (inserted below About, before Core Values) */}
-      <section id="faculty" className="bg-white">
+      <section id="faculty" className="bg-white/80">
         <Faculty facultyData={facultyData} />
       </section>
 
@@ -67,32 +74,32 @@ const HomePage = () => {
       </section>
 
       {/* News Section (Blog + News) */}
-      <section id="news" className="bg-white">
+      <section id="news" className="bg-white/80">
         <News blogPosts={blogPosts} newsItems={newsItems} />
       </section>
 
       {/* Feature Section */}
-      <section id="features" className="py-16 bg-gray-50">
+      <section id="features" className="py-16 bg-gray-50/80">
         <FeatureSection />
       </section>
 
       {/* Gallery Section */}
-      <section id="gallery" className="py-16 bg-white">
+      <section id="gallery" className="py-16 bg-white/80">
         <GallerySection />
       </section>
 
       {/* Top Performers Section */}
-      <section id="top-performers" className="py-16 bg-gray-50">
+      <section id="top-performers" className="py-16 bg-gray-50/80">
         <TopPerformers />
       </section>
 
       {/* Announcements Section */}
-      <section id="announcements" className="py-16 bg-white">
+      <section id="announcements" className="py-16 bg-white/80">
         <Announcements />
       </section>
 
       {/* Alumni Testimonials */}
-      <section id="testimonials" className="py-16 bg-gray-50">
+      <section id="testimonials" className="py-16 bg-gray-50/80">
         <AlumniTestimonials />
       </section>
 
@@ -107,7 +114,7 @@ const HomePage = () => {
       </section>
 
       {/* Location (large map) */}
-      <section id="location" className="bg-white">
+      <section id="location" className="bg-white/80">
         {/* render large map above footer (60vh) - Whales College Karachi */}
         <Location 
           lat={24.9075918} 
@@ -117,12 +124,13 @@ const HomePage = () => {
           address="E, 73 Gulshan, Block 7 Gulshan-e-Iqbal, Karachi, 75290"
         />
       </section>
+        </div>
+      </div>
 
-      {/* Footer */}
-      <footer id="footer" className="mt-auto bg-gray-100">
+      {/* Footer - outside watermark area */}
+      <footer id="footer" className="mt-auto bg-gray-100 relative z-50">
         <Footer />
       </footer>
-      </div>
     </div>
   );
 };

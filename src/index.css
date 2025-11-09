@@ -4,6 +4,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap');
 
+/* Import global styles */
+@import './assets/styles/globals.css';
+
 /* Global site styling */
 body {
   @apply bg-accent text-dark font-body;
@@ -14,3 +17,4 @@ body {
 h1, h2, h3, h4 {
   @apply font-heading text-primary;
 }
+

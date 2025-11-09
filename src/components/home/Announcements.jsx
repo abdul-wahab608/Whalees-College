@@ -138,7 +138,7 @@ const Announcements = () => {
                                 Welcome to Whales College! Our new semester starts soon. Please check your email for orientation details and join our community for updates.
                             </p>
                             <a
-                                href="#"
+                                href="https://whales-git-refactored-abdul-wahab608s-projects.vercel.app/"
                                 style={{
                                     color: "#6366f1",
                                     textDecoration: "underline",
@@ -146,6 +146,8 @@ const Announcements = () => {
                                     fontSize: "1rem",
                                     marginTop: "auto",
                                 }}
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 Learn More
                             </a>

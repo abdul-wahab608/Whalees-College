@@ -24,9 +24,10 @@ const HomePage = () => {
     <div className="relative flex flex-col min-h-screen bg-gray-50">
       {/* Marquee announcement above navbar */}
       <div className="bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 text-white py-2 overflow-hidden relative z-50">
-        <marquee behavior="scroll" direction="left" scrollamount="6" className="font-semibold text-sm">
-          🎓 Admissions For 2025 are Open — Apply Now!
-        </marquee>
+        <div className="animate-marquee whitespace-nowrap font-semibold text-sm">
+          <span className="inline-block px-4">🎓 Admissions For 2025 are Open — Apply Now!</span>
+          <span className="inline-block px-4">🎓 Admissions For 2025 are Open — Apply Now!</span>
+        </div>
       </div>
 
       {/* Navbar */}

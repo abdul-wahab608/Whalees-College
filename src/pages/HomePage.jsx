@@ -14,6 +14,7 @@ import StatsSection from "../components/home/StatsSection";
 import Dean from "../components/home/Dean";
 import Location from "../components/home/Location";
 import Footer from "../components/Footer";
+import YouTubeEmbed from "../components/common/YouTubeEmbed";
 import facultyData from "../data/faculty";
 import blogPosts from "../data/blogPosts";
 import newsItems from "../data/newsItems";
@@ -63,19 +64,56 @@ const HomePage = () => {
         <About />
       </section>
 
-      {/* Faculty Section (inserted below About, before Core Values) */}
+      {/* Campus Tour Video - Left Aligned */}
+      <section className="py-12 bg-white/80">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl">
+            <YouTubeEmbed
+              videoUrl="https://youtu.be/kxw6sY-wZF0?si=adWAQzDxCtvAYr7N"
+              title="Campus Tour"
+              description="Explore our beautiful campus and state-of-the-art facilities"
+            />
+          </div>
+        </div>
+      </section>
+
       <section id="faculty" className="bg-white/80">
         <Faculty facultyData={facultyData} />
       </section>
 
-      {/* Core Values Section */}
       <section id="core-values">
         <CoreValues />
+      </section>
+
+      {/* Life at Whales Video - Left Aligned */}
+      <section className="py-12 bg-white/80">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl">
+            <YouTubeEmbed
+              videoUrl="https://youtu.be/WLJGEq0DH30?si=TkqunbQlHfmDHCSe"
+              title="Life at Whales"
+              description="Discover the vibrant student life and community at Whales College"
+            />
+          </div>
+        </div>
       </section>
 
       {/* News Section (Blog + News) */}
       <section id="news" className="bg-white/80">
         <News blogPosts={blogPosts} newsItems={newsItems} />
+      </section>
+
+      {/* Career at Whales Video - Right Aligned */}
+      <section className="py-12 bg-gray-50/80">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl ml-auto">
+            <YouTubeEmbed
+              videoUrl="https://youtu.be/HbzL95duqq8?si=VtILCpuBodcAjwbY"
+              title="Career at Whales"
+              description="Learn about career opportunities and professional development at Whales College"
+            />
+          </div>
+        </div>
       </section>
 
       {/* Feature Section */}

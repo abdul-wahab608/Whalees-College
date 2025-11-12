@@ -55,7 +55,8 @@ const HomePage = () => {
         />
 
         {/* Main content with watermark */}
-        <div className="relative z-20">      {/* Hero Section */}
+        <div className="relative z-20">
+      {/* Hero Section */}
       <section id="hero">
         <HeroSection />
       </section>
@@ -65,66 +66,25 @@ const HomePage = () => {
         <About />
       </section>
 
-      {/* Campus Tour Video - Left Aligned */}
+      {/* Campus Tour Video */}
       <section className="py-12 bg-white/80">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl">
-            <YouTubeEmbed
-              videoUrl="https://youtu.be/kxw6sY-wZF0?si=adWAQzDxCtvAYr7N"
-              title="Campus Tour"
-              description="Explore our beautiful campus and state-of-the-art facilities"
-            />
-          </div>
+        <div className="w-full px-4 sm:px-6 lg:px-8">
+          <YouTubeEmbed
+            videoUrl="https://youtu.be/kxw6sY-wZF0?si=adWAQzDxCtvAYr7N"
+            title="Campus Tour"
+            description="Explore our beautiful campus and state-of-the-art facilities"
+          />
         </div>
       </section>
 
-      <section id="faculty" className="bg-white/80">
-        <Faculty facultyData={facultyData} />
-      </section>
-
-      <section id="core-values">
+      {/* Core Values */}
+      <section id="core-values" className="bg-gray-50/80">
         <CoreValues />
       </section>
 
-      {/* Life at Whales Video - Left Aligned */}
-      <section className="py-12 bg-white/80">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl">
-            <YouTubeEmbed
-              videoUrl="https://youtu.be/WLJGEq0DH30?si=TkqunbQlHfmDHCSe"
-              title="Life at Whales"
-              description="Discover the vibrant student life and community at Whales College"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* News Section (Blog + News) */}
-      <section id="news" className="bg-white/80">
-        <News blogPosts={blogPosts} newsItems={newsItems} />
-      </section>
-
-      {/* Career at Whales Video - Right Aligned */}
-      <section className="py-12 bg-gray-50/80">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl ml-auto">
-            <YouTubeEmbed
-              videoUrl="https://youtu.be/HbzL95duqq8?si=VtILCpuBodcAjwbY"
-              title="Career at Whales"
-              description="Learn about career opportunities and professional development at Whales College"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Feature Section */}
-      <section id="features" className="py-16 bg-gray-50/80">
-        <FeatureSection />
-      </section>
-
-      {/* Gallery Section */}
-      <section id="gallery" className="py-16 bg-white/80">
-        <GallerySection />
+      {/* Faculty Section */}
+      <section id="faculty" className="bg-white/80">
+        <Faculty facultyData={facultyData} />
       </section>
 
       {/* Top Performers Section */}
@@ -132,29 +92,60 @@ const HomePage = () => {
         <TopPerformers />
       </section>
 
-      {/* Announcements Section */}
-      <section id="announcements" className="py-16 bg-white/80">
-        <Announcements />
+      {/* Feature Section */}
+      <section id="features" className="py-16 bg-white/80">
+        <FeatureSection />
+      </section>
+
+      {/* Life at Whales Video */}
+      <section className="py-12 bg-gray-50/80">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
+          <YouTubeEmbed
+            videoUrl="https://youtu.be/WLJGEq0DH30?si=TkqunbQlHfmDHCSe"
+            title="Life at Whales"
+            description="Discover the vibrant student life and community at Whales College"
+          />
+        </div>
       </section>
 
       {/* Alumni Testimonials */}
-      <section id="testimonials" className="py-16 bg-gray-50/80">
+      <section id="testimonials" className="py-16 bg-white/80">
         <AlumniTestimonials />
       </section>
 
-      {/* Dean Section (above stats) */}
-      <section id="dean">
+      {/* Gallery Section */}
+      <section id="gallery" className="py-16 bg-gray-50/80">
+        <GallerySection />
+      </section>
+
+      {/* Career at Whales Video */}
+      <section className="py-12 bg-white/80">
+        <div className="w-full px-4 sm:px-6 lg:px-8">
+          <YouTubeEmbed
+            videoUrl="https://youtu.be/HbzL95duqq8?si=VtILCpuBodcAjwbY"
+            title="Career at Whales"
+            description="Learn about career opportunities and professional development at Whales College"
+          />
+        </div>
+      </section>
+
+      {/* Announcements Section */}
+      <section id="announcements" className="py-16 bg-gray-50/80">
+        <Announcements />
+      </section>
+
+      {/* Dean's Message */}
+      <section id="dean" className="bg-white/80">
         <Dean />
       </section>
 
-      {/* Stats Section */}
-      <section id="stats">
-        <StatsSection />
+      {/* News Section */}
+      <section id="news" className="bg-gray-50/80">
+        <News blogPosts={blogPosts} newsItems={newsItems} />
       </section>
 
-      {/* Location (large map) */}
+      {/* Location */}
       <section id="location" className="bg-white/80">
-        {/* render large map above footer (60vh) - Whales College Karachi */}
         <Location 
           lat={24.9075918} 
           lng={67.1217672} 

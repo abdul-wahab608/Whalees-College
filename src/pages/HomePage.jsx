@@ -62,13 +62,13 @@ const HomePage = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 bg-gray-50/80">
+      <section id="about" className="bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50">
         <About />
       </section>
 
       {/* Campus Tour Video */}
-      <section className="py-12 bg-white/80">
-        <div className="w-full px-4 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-r from-blue-100 via-blue-200 to-blue-100">
+        <div className="w-full px-4 sm:px-6 lg:px-8 py-12">
           <YouTubeEmbed
             videoUrl="https://youtu.be/kxw6sY-wZF0?si=adWAQzDxCtvAYr7N"
             title="Campus Tour"
@@ -78,28 +78,28 @@ const HomePage = () => {
       </section>
 
       {/* Core Values */}
-      <section id="core-values" className="bg-gray-50/80">
+      <section id="core-values" className="bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50">
         <CoreValues />
       </section>
 
       {/* Faculty Section */}
-      <section id="faculty" className="bg-white/80">
+      <section id="faculty" className="bg-gradient-to-r from-blue-100 via-blue-200 to-blue-100">
         <Faculty facultyData={facultyData} />
       </section>
 
       {/* Top Performers Section */}
-      <section id="top-performers" className="py-16 bg-gray-50/80">
+      <section id="top-performers" className="bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50">
         <TopPerformers />
       </section>
 
       {/* Feature Section */}
-      <section id="features" className="py-16 bg-white/80">
+      <section id="features" className="bg-gradient-to-r from-blue-100 via-blue-200 to-blue-100">
         <FeatureSection />
       </section>
 
       {/* Life at Whales Video */}
-      <section className="py-12 bg-gray-50/80">
-        <div className="w-full px-4 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50">
+        <div className="w-full px-4 sm:px-6 lg:px-8 py-12">
           <YouTubeEmbed
             videoUrl="https://youtu.be/WLJGEq0DH30?si=TkqunbQlHfmDHCSe"
             title="Life at Whales"
@@ -109,18 +109,18 @@ const HomePage = () => {
       </section>
 
       {/* Alumni Testimonials */}
-      <section id="testimonials" className="py-16 bg-white/80">
+      <section id="testimonials" className="bg-gradient-to-r from-blue-100 via-blue-200 to-blue-100">
         <AlumniTestimonials />
       </section>
 
       {/* Gallery Section */}
-      <section id="gallery" className="py-16 bg-gray-50/80">
+      <section id="gallery" className="bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50">
         <GallerySection />
       </section>
 
       {/* Career at Whales Video */}
-      <section className="py-12 bg-white/80">
-        <div className="w-full px-4 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-r from-blue-100 via-blue-200 to-blue-100">
+        <div className="w-full px-4 sm:px-6 lg:px-8 py-12">
           <YouTubeEmbed
             videoUrl="https://youtu.be/HbzL95duqq8?si=VtILCpuBodcAjwbY"
             title="Career at Whales"
@@ -130,22 +130,27 @@ const HomePage = () => {
       </section>
 
       {/* Announcements Section */}
-      <section id="announcements" className="py-16 bg-gray-50/80">
+      <section id="announcements" className="bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50">
         <Announcements />
       </section>
 
       {/* Dean's Message */}
-      <section id="dean" className="bg-white/80">
+      <section id="dean" className="bg-gradient-to-r from-blue-100 via-blue-200 to-blue-100">
         <Dean />
       </section>
 
+      {/* Stats Section */}
+      <section id="stats" className="bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50">
+        <StatsSection />
+      </section>
+
       {/* News Section */}
-      <section id="news" className="bg-gray-50/80">
+      <section id="news" className="bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50">
         <News blogPosts={blogPosts} newsItems={newsItems} />
       </section>
 
       {/* Location */}
-      <section id="location" className="bg-white/80">
+      <section id="location" className="bg-gradient-to-r from-blue-100 via-blue-200 to-blue-100">
         <Location 
           lat={24.9075918} 
           lng={67.1217672} 

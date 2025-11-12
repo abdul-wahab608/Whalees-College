@@ -57,7 +57,7 @@ export default function About() {
                         viewport={{ once: true }}
                     >
                         <motion.h2
-                            className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent"
+                            className="text-3xl md:text-4xl font-bold text-blue-800 mb-4"
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.6, delay: 0.2 }}
@@ -78,7 +78,7 @@ export default function About() {
 
                     {/* Main Content Grid */}
                     <div className="grid md:grid-cols-2 gap-8 items-center">
-                        {/* Left - Animated Whale Illustration */}
+                        {/* Left - Whale 3D Image */}
                         <motion.div
                             className="relative"
                             initial={{ opacity: 0, x: -50 }}
@@ -87,12 +87,11 @@ export default function About() {
                             viewport={{ once: true }}
                         >
                             <div className="relative w-full aspect-square max-w-md mx-auto">
-                                {/* Floating Whale */}
+                                {/* Floating Whale Image */}
                                 <motion.div
-                                    className="absolute inset-0"
+                                    className="absolute inset-0 flex items-center justify-center"
                                     animate={{
                                         y: [0, -20, 0],
-                                        rotate: [-2, 2, -2],
                                     }}
                                     transition={{
                                         duration: 6,
@@ -100,44 +99,11 @@ export default function About() {
                                         ease: "easeInOut",
                                     }}
                                 >
-                                    <svg viewBox="0 0 240 240" className="w-full h-full drop-shadow-2xl">
-                                        {/* Whale Body */}
-                                        <ellipse cx="120" cy="120" rx="90" ry="60" fill="url(#whaleGradient)" />
-                                        <defs>
-                                            <linearGradient id="whaleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                                <stop offset="0%" stopColor="#3b82f6" />
-                                                <stop offset="100%" stopColor="#8b5cf6" />
-                                            </linearGradient>
-                                        </defs>
-                                        {/* Belly */}
-                                        <ellipse cx="120" cy="135" rx="70" ry="45" fill="#bfdbfe" opacity="0.6" />
-                                        {/* Fins */}
-                                        <ellipse cx="180" cy="110" rx="25" ry="12" fill="#60a5fa" />
-                                        <ellipse cx="60" cy="110" rx="22" ry="10" fill="#60a5fa" />
-                                        {/* Eye */}
-                                        <circle cx="150" cy="110" r="10" fill="white" />
-                                        <circle cx="152" cy="112" r="6" fill="#1e293b" />
-                                        <circle cx="154" cy="110" r="3" fill="white" />
-                                        {/* Smile */}
-                                        <path d="M130 140 Q140 150 150 140" stroke="white" strokeWidth="4" fill="none" strokeLinecap="round" />
-                                        {/* Tail */}
-                                        <path d="M30 90 Q10 70 40 110 Q60 130 30 90" fill="#6366f1" />
-                                        {/* Water spout */}
-                                        <motion.path
-                                            d="M120 60 Q115 30 120 20 M120 60 Q125 35 130 25"
-                                            stroke="#60a5fa"
-                                            strokeWidth="3"
-                                            fill="none"
-                                            strokeLinecap="round"
-                                            initial={{ pathLength: 0, opacity: 0 }}
-                                            animate={{ pathLength: 1, opacity: [0, 1, 0] }}
-                                            transition={{
-                                                duration: 2,
-                                                repeat: Infinity,
-                                                ease: "easeInOut",
-                                            }}
-                                        />
-                                    </svg>
+                                    <img 
+                                        src="/assets/images/whale3d.png" 
+                                        alt="Whales College 3D Logo" 
+                                        className="w-full h-full object-contain drop-shadow-2xl"
+                                    />
                                 </motion.div>
 
                                 {/* Floating Bubbles */}

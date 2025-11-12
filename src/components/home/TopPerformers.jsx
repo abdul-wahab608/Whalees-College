@@ -66,7 +66,7 @@ const TopPerformers = () => {
         >
             <div className="max-w-6xl mx-auto px-6">
                 <div className="text-center mb-10">
-                    <h2 className="text-3xl font-extrabold text-gray-900">Top Performers</h2>
+                    <h2 className="text-3xl md:text-4xl font-bold text-blue-800">Top Performers</h2>
                     <p className="mt-2 text-gray-600">Celebrating students who achieved academic excellence and outstanding contributions.</p>
                 </div>
 

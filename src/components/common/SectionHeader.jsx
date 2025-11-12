@@ -6,7 +6,7 @@ import React from "react";
  */
 const SectionHeader = ({ title, subtitle, className = "" }) => (
   <div className={`text-center mb-10 ${className}`}>
-    <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+    <h2 className="text-3xl md:text-4xl font-bold text-blue-800">
       {title}
     </h2>
     {subtitle && (

@@ -45,7 +45,7 @@ const Dean = () => {
             className="md:col-span-3 flex flex-col"
           >
             <div className="mb-6">
-              <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+              <h2 className="text-3xl md:text-4xl font-bold text-blue-800">
                 Dean's Message
               </h2>
               <p className="mt-2 text-sm font-medium text-blue-700">{dean.name}, {dean.title}</p>
